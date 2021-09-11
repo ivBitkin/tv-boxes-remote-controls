@@ -1,0 +1,58 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:import/errors",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "optionalDependencies": true
+      }
+    ],
+    "no-use-before-define": 0,
+    "arrow-body-style": 0,
+    "dot-notation": 0,
+    "no-console": 0,
+    "react/jsx-key": 0,
+    "semi": 2,
+    "react/sort-comp": 1,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
+  "env": {
+    "mocha": true,
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "globals": {
+    "fetch": true,
+    "window": true,
+    "document": true,
+    "__DEV__": true,
+    "__TEST__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__SSR__": true,
+    "__PERSIST_GQL__": true,
+    "__API_URL__": true,
+    "__WEBSITE_URL__": true,
+    "__FRONTEND_BUILD_DIR__": true,
+    "__DLL_BUILD_DIR__": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
