@@ -10,6 +10,9 @@ export const SidebarWrap = styled.div`
 
 export const Title = styled.h2`
   color: #EDEDED;
+  text-decoration: underline;
+  font-size: 18px;
+  padding-left: 14px;
 `;
 
 export const List = styled.ul`
