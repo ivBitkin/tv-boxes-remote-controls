@@ -16,7 +16,6 @@ export const Content = ({  arr2d, setItemsLine, selectFilm={selectFilm}, scene={
     }, [arr2d, refContent, width]);
 
     return <ContentWrap >
-        Count: {arr2d.length}
         <ListFilms ref={refContent}>
 
             { arr2d.map(list => {
