@@ -32,7 +32,11 @@ export const sceneContent = (event, setScene, setSelectFilm, selectFilm, itemsLi
       break;
     case 38:
       if(selectFilm.row  === 0){
-        setSelectFilm({...selectFilm, row: arr2d.length - 1 });
+        if(selectFilm.item + 1 <= arr2d[arr2d.length - 1].length){
+          setSelectFilm({...selectFilm, row: arr2d.length - 1 });
+        } else {
+          setSelectFilm({item: arr2d[arr2d.length - 1].length - 1, row: arr2d.length - 1 });
+        }
       } else {
         setSelectFilm(prevState => ({...selectFilm, row: prevState.row - 1}));
       }

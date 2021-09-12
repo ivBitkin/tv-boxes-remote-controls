@@ -24,7 +24,7 @@ export const Player = ({ scene, selectedFilm, selectBtn }) => {
           </OptionWrapper>
           <VideoPlayer url={selectedFilm.poster_path}></VideoPlayer>
           <Navigate>
-            {['Play', 'Trailer', '+ Playlist'].map((item, index) => <Button selectBtn={selectBtn === index}>{item}</Button> )}
+            {['Play', 'Trailer', '+ Playlist'].map((item, index) => <Button key={item} selectBtn={selectBtn === index}>{item}</Button> )}
           </Navigate>
         </PlayerContent>
         <Description>
